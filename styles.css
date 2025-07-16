@@ -1,0 +1,94 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #0a0a0a;
+  color: #fff;
+  font-family: 'IBM Plex Sans', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  overflow: hidden;
+}
+
+.main-stage {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+h1#main-title {
+  font-size: 2.7rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  margin: 0 0 2rem 0;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 16px #00fff7, 0 0 2px #fff;
+}
+
+h1#main-title span {
+  display: inline-block;
+  transition: color 0.3s, text-shadow 0.3s;
+  will-change: transform, color, text-shadow;
+}
+
+#dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #00fff7 60%, #0a0a0a 100%);
+  box-shadow: 0 0 32px 8px #00fff7, 0 0 8px 2px #fff;
+  margin: 0 auto;
+  display: block;
+  opacity: 0;
+  z-index: 3;
+}
+
+#svg-stage {
+  width: 220px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+#three-stage {
+  width: 320px;
+  height: 320px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#three-stage canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  border-radius: 50%;
+  background: #181818;
+  box-shadow: 0 4px 32px rgba(0,255,247,0.18), 0 0 32px #00fff744;
+} 
